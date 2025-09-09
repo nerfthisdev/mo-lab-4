@@ -13,6 +13,8 @@ def coordinate_descent(
     it = 0
 
     if trace:
+        print()
+        print("!!! COORDINATE DESCENT !!!")
         print(f"M0 = ({x[0]:.6f}, {x[1]:.6f}), f(M0) = {f(x):.6f}")
 
     while it < max_iter:

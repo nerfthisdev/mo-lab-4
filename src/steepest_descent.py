@@ -26,7 +26,11 @@ def golden_section_search(f, a, b, tol=1e-5, max_iter=1000):
 
 
 def steepest_descent(f, grad, x0, eps=1e-4, max_iter=1000, trace=False):
+    print()
+    print("!!! STEEPEST DESCENT !!!")
+
     x = np.array(x0, dtype=float)
+    k = 0
 
     for k in range(max_iter):
         g = grad(x)
@@ -51,4 +55,4 @@ def steepest_descent(f, grad, x0, eps=1e-4, max_iter=1000, trace=False):
 
         x = x_new
 
-    return x, f(x)
+    return x, f(x), k
